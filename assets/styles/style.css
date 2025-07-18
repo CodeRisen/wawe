@@ -466,37 +466,120 @@
 /* Contact Section */
 .contact {
   width: 100%;
-  margin: 0 360px;
+}
+
+.contact__title {
+  text-align: center;
+  font-size: 48px;
+  color: #01353e;
+  font-weight: 600;
+  margin-bottom: 100px;
 }
 .contact__container {
+  display: flex;
+  gap: 30px;
+  width: 60%;
+  margin: 0 auto;
 }
 .form {
+  width: 50%;
 }
 .form__group {
+  width: 100%;
 }
 .form__label {
 }
 .form__input {
 }
 .form__textarea {
+  height: 150px;
+  resize: none;
 }
+.form__textarea,
+.form__input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #dadada;
+  background-color: transparent;
+  padding-bottom: 18px;
+  margin-top: 30px;
+}
+
+.form__textarea:focus,
+.form__input:focus {
+  outline: none; /* убирает синюю рамку */
+  box-shadow: none; /* на всякий случай — убирает возможные тени */
+}
+
 .form__submit {
+  font-size: 24px;
+  padding: 25px 110px;
+  margin-top: 75px;
+
+  text-transform: uppercase;
+
+  border: 1px solid #c4c4c4;
+
+  background-color: transparent;
+
+  cursor: pointer;
 }
 .contact__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  width: 50%;
+  padding: 50px 190px 70px 50px;
+
+  background-color: #f8f8f8;
 }
 .contact__info-text {
+  font-size: 24px;
+}
+
+/* изменение свойств placholder  */
+textarea::placeholder,
+input::placeholder,
+.form__textarea,
+.form__input {
+  color: #00b2a0;
+  opacity: 1;
+  font-size: 18px;
 }
 
 /* Social Section */
 .social {
+  padding: 200px 0;
+  width: 100%;
 }
 .social__links {
+  display: flex;
+  gap: 10px;
+
+  justify-content: center;
+
+  margin: 0 auto;
 }
 .social__link {
+  color: #242121;
+  font-size: 24px;
+  text-transform: uppercase;
+  transition: color 0.3s ease, font-size 0.3s ease;
+}
+.social__link:hover {
+  color: #00b2a0;
 }
 
 /* Footer */
 .footer {
+  width: 100%;
+  background-color: #00b2a0;
+  padding: 70px 0;
 }
 .logo {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 0%);
 }
