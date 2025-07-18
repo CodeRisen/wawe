@@ -1,3 +1,7 @@
+.mobile {
+  display: none;
+}
+
 /* Header */
 .header {
   position: absolute;
@@ -87,7 +91,6 @@
 .about {
   margin: 200px auto;
 
-  height: 966px;
   width: 60%;
 
   background-color: #ffffff;
@@ -99,43 +102,31 @@
   font-size: 48px;
 }
 .about__wrapper {
-  display: flex;
-  gap: 120px;
-  width: 100%;
   margin: 100px auto 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 120px;
+  grid-row-gap: 30px;
 }
+
 .underline-icon {
   position: relative;
   top: 25px;
   left: -10px;
   width: 45px;
 }
-.about__left-text,
-.about__right-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 30px;
-  flex: 1;
 
+.about__text {
   color: #242121;
   font-size: 14px;
   line-height: 1.5;
-}
-
-.about__text {
-  max-width: 600px;
-  height: 105px;
 }
 .about__right-text {
 }
 
 /* Advantage Section */
 .advantage {
-  height: 953px;
-
-  padding: 200px 360px;
-
+  padding: 200px 0;
   background-color: #f8f8f8;
 
   color: #242121;
@@ -145,15 +136,27 @@
   font-size: 48px;
   margin-bottom: 100px;
 }
+
+.advantage__container,
+.advantage__items-container {
+  width: 75%;
+  margin: 0 auto;
+}
 .advantage__items-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  flex: 1;
+
   gap: 75px;
 
   margin-bottom: 100px;
 }
+
+.advantage__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 .advantage__item {
 }
 
@@ -174,13 +177,8 @@
 .item__icon {
 }
 
-.advantage__container {
-  display: flex;
-  flex-direction: row;
-  gap: 250px;
-}
 .advantage__graphics {
-  white-space: nowrap;
+  width: 30%;
 }
 .graphic__wrapper {
   font-size: 14px;
@@ -192,6 +190,7 @@
   font-size: 24px;
 }
 .advantage__text-wrapper {
+  width: 50%;
 }
 .advantage__text {
   margin-bottom: 30px;
@@ -252,7 +251,7 @@
   top: 25px;
   right: 140px;
   font-size: 14px;
-  /* font-style: light-italic; */
+  font-style: italic;
 }
 
 /* About Numbers Section */
@@ -264,7 +263,7 @@
 }
 .about-numbers__video {
   display: block;
-  width: 1200px;
+  width: 100%;
 
   margin: 0 auto;
   padding-bottom: 200px;
@@ -328,8 +327,6 @@
 .article__image {
   width: 100%;
   height: 800px;
-
-  background: linear-gradient(#242121, #242121, 50%);
 
   object-fit: cover;
   object-position: center;
@@ -507,8 +504,8 @@
 
 .form__textarea:focus,
 .form__input:focus {
-  outline: none; /* убирает синюю рамку */
-  box-shadow: none; /* на всякий случай — убирает возможные тени */
+  outline: none;
+  box-shadow: none;
 }
 
 .form__submit {
@@ -582,4 +579,138 @@ input::placeholder,
   top: 50%;
   left: 50%;
   transform: translate(-50%, 0%);
+}
+
+/* Для планшетов и меньше (максимальная ширина 1200px) */
+@media (max-width: 1200px) {
+  br,
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: block;
+  }
+
+  /* about section */
+  .about__title {
+    font-size: 24px;
+  }
+  .underline-icon {
+    position: relative;
+    top: 20px;
+    left: -13px;
+    width: 30px;
+  }
+  .about__wrapper {
+    margin-top: 50px;
+
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 50px;
+    grid-row-gap: 15px;
+  }
+
+  .about__text {
+    font-size: 12px;
+  }
+  /* Advantage Section */
+  .advantage {
+    padding: 100px 0;
+  }
+  .advantage__title {
+    font-size: 24px;
+    margin-bottom: 50px;
+  }
+
+  .advantage__container,
+  .advantage__items-container {
+    width: 75%;
+    margin: 0 auto;
+  }
+  .advantage__items-container {
+    gap: 30px;
+    margin-bottom: 50px;
+  }
+
+  .advantage__item__title {
+    font-size: 18px;
+  }
+
+  .graphic__wrapper {
+    font-size: 14px;
+  }
+  .graphics__image {
+    display: none;
+  }
+  .graphic__percent {
+    display: block;
+    font-size: 18px;
+  }
+  .advantage__text-wrapper {
+    width: 50%;
+  }
+  .advantage__text {
+    margin-bottom: 15px;
+  }
+  /* Call to Action Section */
+  .cta {
+    position: relative;
+
+    padding: 100px 0;
+  }
+  .cta__title {
+    font-size: 24px;
+
+    color: #ffffff;
+    padding-bottom: 40px;
+  }
+  .cta__text-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    margin: 0 auto;
+
+    z-index: 1;
+  }
+  .cta__text {
+    color: #ffffff;
+  }
+  .cta__image {
+    position: absolute;
+    top: 0px;
+    left: -66px;
+    width: 117%;
+    z-index: -1;
+  }
+
+  /* Quote */
+
+  .quote__text {
+    font-size: 24px;
+  }
+  .quote__author {
+    font-size: 12px;
+  }
+  /* About Numbers Section */
+  .about-numbers {
+    padding: 100px 0;
+  }
+  .about-numbers__video {
+    padding-bottom: 70px;
+  }
+  .about-numbers__numbers-wrapper {
+    gap: 50px;
+  }
+
+  .about-numbers__number-value {
+    font-size: 56px;
+  }
+}
+
+/* Для мобильных (максимальная ширина 767px) */
+@media (max-width: 767px) {
+  .about__title {
+    font-size: 28px;
+  }
 }
