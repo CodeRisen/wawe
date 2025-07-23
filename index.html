@@ -13,6 +13,8 @@
 
     <link rel="stylesheet" href="assets/styles/reset.css" />
     <link rel="stylesheet" href="assets/styles/style.css" />
+    <script src="assets/scripts/openBurger.js" defer></script>
+    <script src="assets/scripts/articleSlider.js" defer></script>
     <title>Wawe</title>
   </head>
   <body>
@@ -30,6 +32,23 @@
           <li><a href="#contact">Контакты</a></li>
         </ul>
       </nav>
+      <div class="header__burger-nav" id="burger-menu">
+        <img
+          class="burger-icon"
+          src="assets/images/header/burger.svg"
+          alt="Меню"
+        />
+        <nav class="burger-menu__nav" id="burger-menu-nav">
+          <ul>
+            <li><a href="#home">О нас</a></li>
+            <li><a href="#about">Услуги</a></li>
+            <li><a href="#services">Стоимость</a></li>
+            <li><a href="#blog">Блог</a></li>
+            <li><a href="#team">Команда</a></li>
+            <li><a href="#contact">Контакты</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <section class="hero">
@@ -242,7 +261,7 @@
           серфинга - только вы и тренер!
         </p>
       </div>
-      <div class="mobile mask">
+      <div class="mask-mobile">
         <img
           src="assets/images/cta/surfingMan.jpg"
           alt="surfingMan"
@@ -295,34 +314,87 @@
           class="underline-icon"
         />
       </h2>
-      <div class="blog__article">
-        <div class="article__text-wrapper">
-          <h3 class="article__title">
-            ЧТО НЕОБХОДИМО ВЗЯТЬ С СОБОЙ НА СЕРФ ТУР
-          </h3>
-          <h4 class="article__subtitle">
-            ТОП 20 необходимых вещей для комфортного отдыха и обучения
-          </h4>
+
+      <div class="slides">
+        <div class="blog__article slide">
+          <div class="article__text-wrapper">
+            <h3 class="article__title">
+              ЧТО НЕОБХОДИМО ВЗЯТЬ С СОБОЙ НА СЕРФ ТУР
+            </h3>
+            <h4 class="article__subtitle">
+              ТОП 20 необходимых вещей для комфортного отдыха и обучения
+            </h4>
+          </div>
+
+          <div class="mask">
+            <img
+              src="assets/images/blog/article.jpg"
+              alt=""
+              class="article__image"
+            />
+          </div>
         </div>
-        <div class="mask">
-          <img
-            src="assets/images/blog/article.jpg"
-            alt=""
-            class="article__image"
-          />
+
+        <div class="blog__article slide">
+          <div class="article__text-wrapper">
+            <h3 class="article__title">Готовим тело к волне</h3>
+            <h4 class="article__subtitle">
+              ТОП 10 упражнений, чтобы не завалиться на первой тренировке
+            </h4>
+          </div>
+
+          <div class="mask">
+            <img
+              src="assets/images/blog/article.jpg"
+              alt=""
+              class="article__image"
+            />
+          </div>
         </div>
-        <div class="slider__dots">
-          <span class="dot active"></span>
-          <span class="dot"></span>
-          <span class="dot"></span>
-          <span class="dot"></span>
-          <span class="dot"></span>
-          <span class="dot"></span>
-          <span class="dot"></span>
-          <span class="dot"></span>
-          <span class="dot"></span>
-          <span class="dot"></span>
+        <div class="blog__article slide">
+          <div class="article__text-wrapper">
+            <h3 class="article__title">Серфинг вне доски</h3>
+            <h4 class="article__subtitle">
+              Что делать на острове, когда море штиль и доска сохнет
+            </h4>
+          </div>
+
+          <div class="mask">
+            <img
+              src="assets/images/blog/article.jpg"
+              alt=""
+              class="article__image"
+            />
+          </div>
         </div>
+        <div class="blog__article slide">
+          <div class="article__text-wrapper">
+            <h3 class="article__title">Ошибки новичков</h3>
+            <h4 class="article__subtitle">
+              5 вещей, которые ты точно забудешь — и пожалеешь об этом
+            </h4>
+          </div>
+
+          <div class="mask">
+            <img
+              src="assets/images/blog/article.jpg"
+              alt=""
+              class="article__image"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="slider__dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <!-- <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span> -->
       </div>
     </section>
 
@@ -428,6 +500,7 @@
       <div class="contact__container">
         <form method="post" action="#" class="form">
           <div class="form__group">
+            <label for="name" class="sr-only">Имя</label>
             <input
               type="text"
               id="name"
@@ -437,6 +510,7 @@
             />
           </div>
           <div class="form__group">
+            <label for="phone" class="sr-only">Телефон</label>
             <input
               type="tel"
               id="phone"
@@ -446,6 +520,7 @@
             />
           </div>
           <div class="form__group">
+            <label for="message" class="sr-only">Сообщение</label>
             <textarea
               id="message"
               class="form__textarea"
