@@ -293,9 +293,11 @@
 .about-numbers__video {
   display: block;
   width: 100%;
+  height: 800px;
 
   margin: 0 auto;
   padding-bottom: 200px;
+  object-fit: cover;
 }
 .about-numbers__numbers-wrapper {
   display: flex;
@@ -369,7 +371,7 @@
 
 .article__image {
   width: 100%;
-  height: 100%;
+  height: 800px;
 
   object-fit: cover;
   object-position: center;
@@ -410,7 +412,7 @@
 /* Team Section */
 .team {
   width: 100%;
-  padding: 0 360px;
+  padding: 0 36px;
 }
 .team__title {
   text-align: center;
@@ -874,6 +876,7 @@ input::placeholder {
   }
   .about__wrapper {
     margin: 50px auto 0;
+    padding: 0 10px;
 
     grid-column-gap: 30px;
     grid-row-gap: 20px;
@@ -1044,6 +1047,8 @@ input::placeholder {
   .team-member__image {
     object-fit: cover;
     object-position: center;
+
+    height: 150px;
   }
   .team-member__name {
     font-size: 16px;

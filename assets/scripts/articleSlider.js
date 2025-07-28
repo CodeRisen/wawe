@@ -21,3 +21,8 @@ dots.forEach((dot, i) => {
     console.log(i, currentIndex);
   });
 });
+
+setInterval(() => {
+  currentIndex = (currentIndex + 1) % slides.length;
+  goToSlide(currentIndex);
+}, 5000);

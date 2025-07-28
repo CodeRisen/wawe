@@ -266,6 +266,7 @@
           src="assets/images/cta/surfingMan.jpg"
           alt="surfingMan"
           class="cta__image"
+          loading="lazy"
         />
       </div>
     </section>
@@ -280,12 +281,21 @@
     </div>
 
     <section class="about-numbers">
-      <img
+      <!-- <img
         src="assets/images/about-numbers/video.jpg"
         alt=""
         class="about-numbers__video"
-      />
-      <!--  поменять на видео -->
+      /> -->
+      <video
+        src="assets/videos/about-numbers/video.mp4"
+        alt=""
+        class="about-numbers__video"
+        autoplay
+        muted
+        loop
+        playsinline
+      ></video>
+
       <div class="about-numbers__numbers-wrapper">
         <div class="about-numbers__number">
           <div class="about-numbers__number-value">450</div>
@@ -345,9 +355,10 @@
 
           <div class="mask">
             <img
-              src="assets/images/blog/article.jpg"
+              src="assets/images/blog/article2.jpg"
               alt=""
               class="article__image"
+              loading="lazy"
             />
           </div>
         </div>
@@ -361,9 +372,10 @@
 
           <div class="mask">
             <img
-              src="assets/images/blog/article.jpg"
+              src="assets/images/blog/article3.jpg"
               alt=""
               class="article__image"
+              loading="lazy"
             />
           </div>
         </div>
@@ -377,9 +389,10 @@
 
           <div class="mask">
             <img
-              src="assets/images/blog/article.jpg"
+              src="assets/images/blog/article4.jpg"
               alt=""
               class="article__image"
+              loading="lazy"
             />
           </div>
         </div>
@@ -409,6 +422,7 @@
             src="assets/images/team/mike.jpg"
             alt="Team Member 1"
             class="team-member__image"
+            loading="lazy"
           />
           <h3 class="team-member__name">Mike</h3>
           <p class="team-member__role">Главный инструктор</p>
@@ -418,6 +432,7 @@
             src="assets/images/team/maria.jpg"
             alt="Team Member 2"
             class="team-member__image"
+            loading="lazy"
           />
           <h3 class="team-member__name">Мария</h3>
           <p class="team-member__role">Инструктор по серфингу</p>
@@ -427,6 +442,7 @@
             src="assets/images/team/olga.jpg"
             alt="Team Member 3"
             class="team-member__image"
+            loading="lazy"
           />
           <h3 class="team-member__name">Ольга</h3>
           <p class="team-member__role">Инструктор по серфингу</p>
@@ -489,7 +505,12 @@
     </section>
 
     <section class="location">
-      <img src="assets/images/location/map.jpg" alt="map" class="map" />
+      <img
+        src="assets/images/location/map.jpg"
+        alt="map"
+        class="map"
+        loading="lazy"
+      />
     </section>
 
     <section class="contact">
